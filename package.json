@@ -1,0 +1,26 @@
+{
+  "name": "ts_ach_example",
+  "version": "1.0.0",
+  "description": "node example",
+  "main": "index.js",
+  "dependencies": {
+    "ach-node-sdk": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GrahamMcBain/ach-node-example.git"
+  },
+  "keywords": [
+    "ach"
+  ],
+  "author": "Graham McBain",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GrahamMcBain/ach-node-example/issues"
+  },
+  "homepage": "https://github.com/GrahamMcBain/ach-node-example#readme"
+}

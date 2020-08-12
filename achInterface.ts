@@ -72,3 +72,13 @@ interface FileHeader {
   fileCreationDate: string;
   fileIDModifier: string;
 }
+
+export {
+  Addenda02,
+  Addenda05,
+  Batch,
+  BatchHeader,
+  EntryDetail,
+  FileHeader,
+  RootObject
+}
