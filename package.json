@@ -4,11 +4,14 @@
   "description": "node example",
   "main": "index.js",
   "dependencies": {
-    "ach-node-sdk": "^1.0.0"
+    "ach-node-sdk": "^1.0.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node payroll.ts"
   },
   "repository": {
     "type": "git",

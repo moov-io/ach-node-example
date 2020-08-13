@@ -1,6 +1,6 @@
 import {RootObject,FileHeader,EntryDetail,BatchHeader} from "./achInterface"
 import { ACHFilesApi, Configuration } from 'ach-node-sdk';
-const configuration = new Configuration({ basePath: 'http://localhost:8080' });
+const configuration = new Configuration({ basePath: 'http://ach:8080' });
 const achFilesApi = new ACHFilesApi(configuration);
 let Example_BlogPost = {};
 // Build the File Header
@@ -14,7 +14,7 @@ const fh: FileHeader = {
     fileIDModifier: 'M'
 }
 //Build the Batch Header
-const bh: BatchHeader = {
+const bh = {
     "ID": "0",
     "serviceClassCode": 220,
     "companyName": "Acme Corp",
@@ -25,7 +25,6 @@ const bh: BatchHeader = {
     "companyDescriptiveDate": "string",
     "effectiveEntryDate": "190102",
     "ODFIIdentification": "12345678",
-    "batchNumber": 0
 }
 //Create Entry Detail
 var entries = [];
