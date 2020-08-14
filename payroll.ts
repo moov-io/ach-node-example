@@ -6,7 +6,7 @@ let Example_BlogPost = {};
 // Build the File Header
 const fh: FileHeader = {
     immediateOrigin: "123456780",
-    immediateOriginName: "My Banke Name",
+    immediateOriginName: "My Bank Name",
     immediateDestination: "071000301",
     immediateDestinationName: "FRBATLANTA",
     fileCreationTime: "190816", // dynamic, current day - YYMMDD. Y=Year, M=Month, D=Day
@@ -17,7 +17,7 @@ const fh: FileHeader = {
 const bh = {
     "ID": "0",
     "serviceClassCode": 220,
-    "companyName": "Acme Corp",
+    "companyName": "MY_COMPANY_NAME", // Your company name
     "companyDiscretionaryData": "123456789",
     "companyIdentification": "1",
     "standardEntryClassCode": "PPD",
@@ -33,8 +33,8 @@ var entries = [];
      transactionCode: 22,
      RDFIIdentification: '12345678',
      DFIAccountNumber: "151",
-     amount: 10000,
-     individualName: "Joe Smith",
+     amount: AMOUNT_TO_PAY, //Integer of amount per pay period
+     individualName: "YOUR_EMPLOYEE_NAME", //String name of employee
      traceNumber: 'string',
      addenda02: {
          //This is where you put data for the addenda02
