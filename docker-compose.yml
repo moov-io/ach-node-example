@@ -5,8 +5,15 @@ services:
     image: moov/ach:v1.4.4
     ports:
       - "8080:8080"
+    networks:
+      - intranet
 
   example:
-    image: moov/node-ach-example
-    depends_on: 
+    image: moov/ach-node-example:latest
+    depends_on:
       - ach
+    networks:
+      - intranet
+
+networks:
+  intranet:
