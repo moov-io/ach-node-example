@@ -33,11 +33,25 @@ var entries = [];
      transactionCode: 22,
      RDFIIdentification: '12345678',
      DFIAccountNumber: "151",
-     amount: AMOUNT_TO_PAY, //Integer of amount per pay period
+     amount: 2000, //Integer of amount per pay period
      individualName: "YOUR_EMPLOYEE_NAME", //String name of employee
      traceNumber: 'string',
+     addenda02: {
+        //This is where you put data for the addenda02
+        id: 'test',
+        typeCode: 'test',
+        referenceInformationOne: 'test',
+        referenceInformationTwo: 'test',
+        terminalIdentificationCode: 'test',
+        transactionSerialNumber: 'test',
+        transactionDate: '1220',
+        authorizationCodeOrExpireDate: 'test',
+        terminalLocation: 'test',
+        terminalCity: 'test',
+        terminalState: 'test',
+        traceNumber: 'test'
+    },
      addenda05: [{
-         //This is where you put data for the addenda02
          entryDetailSequenceNumber: 4,
          id: '3',
          paymentRelatedInformation: 'PRI',
