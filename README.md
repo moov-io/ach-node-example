@@ -34,8 +34,8 @@ If you’d like a detailed breakdown of what an ACH file entails, checkout out o
 ## Prerequisites
 Before we get started you’ll need to have docker and make installed:
 
-(Docker)[https://docs.docker.com/get-docker/]
-(Make)[https://apps.apple.com/us/app/xcode/id497799835?mt=12]
+[Docker](https://docs.docker.com/get-docker/)
+[Make](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 
 Now all you need to do is star, fork, and clone this project. Next you’ll want to navigate to the project folder and run:
 
