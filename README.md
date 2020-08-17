@@ -16,12 +16,12 @@ What you do need to know is that though you only need one File Header Record/Con
 
 
 - File Header Record
- - Batch Header Record
-    - PPD Entry Detail Records
- - Batch Control Record
- - Batch2 Header Record
-    - PPD Entry Detail Records
- - Batch2 Header Record
+    - Batch Header Record
+        - PPD Entry Detail Records
+    - Batch Control Record
+    - Batch2 Header Record
+        - PPD Entry Detail Records
+    - Batch2 Header Record
 - File Control Record
 
 
