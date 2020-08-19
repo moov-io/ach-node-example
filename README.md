@@ -27,7 +27,7 @@ What you do need to know is that though you only need one File Header Record/Con
 
 You may notice that header records and control records are similar to how HTML tags are used to cordon off different sections of the file. Most of the important information for a file is contained in the PPD Entry Detail Record and there may be multiple records in a single batch. 
 
-If you’d like a detailed breakdown of what an ACH file entails, checkout out our (ACH file structure doc.)[https://github.com/moov-io/ach/blob/master/docs/file-structure.md]. For the purpose of this tutorial we’ll use the default values for many of the fields in your ACH file. 
+If you’d like a detailed breakdown of what an ACH file entails, checkout out our [ACH file structure doc.](https://github.com/moov-io/ach/blob/master/docs/file-structure.md) For the purpose of this tutorial we’ll use the default values for many of the fields in your ACH file. 
 
 
 
@@ -41,11 +41,11 @@ Before we get started you’ll need to have docker and make installed:
 
 Now all you need to do is star, fork, and clone this project. Next you’ll want to navigate to the project folder and run:
 
-```Make```
+```make```
 
 Then you’ll want to run:
 
-```Docker-compose up```
+```docker-compose up```
 
 This will build the ACH API as well as creating an ACH file. Now that you’ve created your first ACH file you can take a look at it here:
 
