@@ -4,7 +4,7 @@
   "description": "node example",
   "main": "index.js",
   "dependencies": {
-    "ach-node-sdk": "^1.0.0",
+    "ach-node-sdk": "^1.5.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
   },

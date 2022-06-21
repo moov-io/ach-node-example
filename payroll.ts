@@ -28,15 +28,15 @@ const bh = {
 }
 //Create Entry Detail
 var entries = [];
- const entry: EntryDetail = {
-     ID: 'a.NewEntryDetail(',
-     transactionCode: 22,
-     RDFIIdentification: '12345678',
-     DFIAccountNumber: "151",
-     amount: 2000, //Integer of amount per pay period
-     individualName: "YOUR_EMPLOYEE_NAME", //String name of employee
-     traceNumber: 'string',
-     addenda02: {
+const entry: EntryDetail = {
+    ID: 'a.NewEntryDetail(',
+    transactionCode: 22,
+    RDFIIdentification: '12345678',
+    DFIAccountNumber: "151",
+    amount: 2000, //Integer of amount per pay period
+    individualName: "YOUR_EMPLOYEE_NAME", //String name of employee
+    traceNumber: 'string',
+    addenda02: {
         //This is where you put data for the addenda02
         id: 'test',
         typeCode: 'test',
@@ -51,29 +51,68 @@ var entries = [];
         terminalState: 'test',
         traceNumber: 'test'
     },
-     addenda05: [{
-         entryDetailSequenceNumber: 4,
-         id: '3',
-         paymentRelatedInformation: 'PRI',
-         sequenceNumber: 454,
-         typeCode: "TC"
-     }],
-     addendaRecordIndicator: 1,
-     checkDigit: "0",
-     discretionaryData: 'somedata',
-     identificationNumber: 'idnumber'
- }
-  entries.push(entry);
- // console.log(entries);
+    addenda05: [{
+        entryDetailSequenceNumber: 4,
+        id: '3',
+        paymentRelatedInformation: 'PRI',
+        sequenceNumber: 454,
+        typeCode: "TC"
+    }],
+    addendaRecordIndicator: 1,
+    checkDigit: "0",
+    discretionaryData: 'somedata',
+    identificationNumber: 'idnumber'
+}
+entries.push(entry);
+// console.log(entries);
 const id = (Math.random()+1) * 10000000000;
- const testFile = achFilesApi.createFile({
-     ID: id+'',
-     fileHeader: fh,
-     batches: [{
-         batchHeader: bh,
-         entryDetails: entries
-     }],
- },'test12345654321',).
-     then((id) => console.log(id.data))
-     .catch( err => console.log(err))
+const body = JSON.stringify({
+    ID: id+'',
+    fileHeader: fh,
+    batches: [{
+        batchHeader: bh,
+        entryDetails: entries
+    }]
+});
+
+const xRequestID = "";
+const xIdempotencyKey = "";
+
+// ValidateOpts
+const requireABAOrigin = undefined;
+const bypassOrigin = undefined;
+const bypassDestination = undefined;
+const customTraceNumbers = undefined;
+const allowZeroBatches = undefined;
+const allowMissingFileHeader = undefined;
+const allowMissingFileControl = undefined;
+const bypassCompanyIdentificationMatch = undefined;
+const customReturnCodes = undefined;
+const unequalServiceClassCode = undefined;
+
+// Request Options
+const options = {
+    headers: {
+        "Content-Type": "application/json",
+    },
+};
+
+const testFile = achFilesApi.createFile(
+    body,
+    xRequestID,
+    xIdempotencyKey,
+    requireABAOrigin,
+    bypassOrigin,
+    bypassDestination,
+    customTraceNumbers,
+    allowZeroBatches,
+    allowMissingFileHeader,
+    allowMissingFileControl,
+    bypassCompanyIdentificationMatch,
+    customReturnCodes,
+    unequalServiceClassCode,
+    options,
+).
+    then((id) => console.log(id.data))
+        .catch( err => console.log(err))
 //
