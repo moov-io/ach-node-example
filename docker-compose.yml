@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ach:
-    image: moov/ach:v1.18.5
+    image: moov/ach:v1.18.6
     ports:
       - "8080:8080"
     networks:
