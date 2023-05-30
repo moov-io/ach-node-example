@@ -9,8 +9,8 @@ const fh: FileHeader = {
     immediateOriginName: "My Bank Name",
     immediateDestination: "071000301",
     immediateDestinationName: "FRBATLANTA",
-    fileCreationTime: "190816", // dynamic, current day - YYMMDD. Y=Year, M=Month, D=Day
-    fileCreationDate: "1055",   // dynamic, currnet day - HHmm. H=Hour, m=Minute;
+    fileCreationDate: "190816", // dynamic, current day - YYMMDD. Y=Year, M=Month, D=Day
+    fileCreationTime: "1055",   // dynamic, currnet day - HHmm. H=Hour, m=Minute;
     fileIDModifier: 'M'
 }
 //Build the Batch Header
