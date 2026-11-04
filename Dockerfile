@@ -1,7 +1,7 @@
 # Node 24.22.1 includes the 2026-10-21 security release
 # (CVE-2026-111497 Brotli RCE, TLS hostname bypasses).
 # https://nodejs.org/en/blog/vulnerability/october-2026-security-releases
-FROM node:24.22.2-slim
+FROM node:26.13.0-slim
 
 ENV NODE_ENV=production
 
